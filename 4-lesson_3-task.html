@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<table class="js-teachers">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Gender</td>
+            <td>Status</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ilia</td>
+            <td>30</td>
+            <td>m</td>
+            <td data-available="true">Free</td>
+        </tr>
+        <tr>
+            <td>Tim</td>
+            <td>39</td>
+            <td>m</td>
+            <td data-available="false">On duty</td>
+        </tr>
+
+        <!-- Строк в таблице может быть больше-->
+    </tbody>
+</table>
+
+<script>
+let table = document.querySelector('table');
+let trs = table.querySelectorAll('tr');
+for (let elem of trs){
+    let tds = elem.querySelectorAll('td');
+    console.log(tds.className);
+    elem.classList.add('avaible');
+    elem.classList.add('male');
+    elem.classList.add('hidden');
+    console.log(elem.className);
+    console.log(tds);    
+}
+
+    function highlight(table) {
+
+    }
+</script>
+</body>
+
+</html>
